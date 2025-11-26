@@ -1,32 +1,50 @@
-import "bootstrap";
-import "./style.css";
+window.onload = function () {
+  let who = ['my cat', 'my cousin', 'my dog', 'my gradnmother']
+  let action = ['ruined', 'ate', 'destroyed', 'broke']
+  let what = ['my homework', 'my car', 'my computer', 'the internet cable']
+  let when = ['when i was cooking', 'while i was coding', 'before my exam', 'after i finshed school']
 
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+
+  function excusesList() {
+
+    let randomWho = who[Math.floor(Math.random() * who.length)];
+    let randomAction = action[Math.floor(Math.random() * action.length)];
+    let randomWhat = what[Math.floor(Math.random() * what.length)];
+    let randomWhen = when[Math.floor(Math.random() * when.length)];
 
 
+    let randomExcuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}`;
 
-let who = ['My cat','My brother','My dog','My dad'];
-let action = ['ruined','ate','destroyed','broke'];
-let what = ['my homework','my car', 'my computer','the internet cable'];
-let when = ['when i was cooking', 'while i was coding','before my exam', 'after i finshed school'];
+    document.getElementById("excuse").textContent = randomExcuse;
+    console.log(randomExcuse)
+  }
+  excusesList()
 
 
-function randomIndex(arr) {
-  let newIndex = Math.floor(Math.random()*arr.length);
-  return arr[newIndex];
 }
+console.log('Hola patricia')
 
-window.onload = function (){
-let randomWho = randomIndex (who);
-let randomAction = randomIndex(action);
-let randomWhat = randomIndex(what);
-let randomWhen = randomIndex(when);
+// let who = ['my cat', 'my cousin', 'my dog', 'my gradnmother']
+// let action = ['ruined', 'ate', 'destroyed', 'broke']
+// let what = ['my homework', 'my car', 'my computer', 'the internet cable']
+// let when = ['When i was cooking', 'While i was coding', 'Before my exam', 'After i finshed school']
 
 
-const newExcuse = ` ${randomWho} ${randomAction} ${randomWhat} ${randomWhen} `; 
 
-document.getElementById ("excuse").innerHTML = newExcuse;
-}
+// function excusesList() {
 
+//     let randomWho = who[Math.floor(Math.random() * who.length)];
+//     let randomAction = action[Math.floor(Math.random() * action.length)];
+//     let randomWhat = what[Math.floor(Math.random() * what.length)];
+//     let randomWhen = when[Math.floor(Math.random() * when.length)];
+
+
+//     let randomExcuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}`;
+
+//     document.getElementbyId("excuse").textContent = randomExcuse;
+
+// }
+// excusesList()
+
+// console.log(excusesList())
